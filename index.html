@@ -4,7 +4,9 @@
 <title>:: 카카오톡 공유하기 ::</title>
 <script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script>Kakao.init('fb26db4001a90d2b8dac68f3cbc738b4');</script>
-
+<a id="kakao-link-btn" href="javascript:shareKakaotalk()">
+      <img src="http://dn.api1.kage.kakao.co.kr/14/dn/btqa9B90G1b/GESkkYjKCwJdYOkLvIBKZ0/o.jpg" />
+</a>
 <script type="text/javascript">
     function shareKakaotalk() {
         Kakao.Link.sendDefault({
@@ -25,8 +27,5 @@
     }
 </script>
 </head>
-<body>
-    <h1>카카오톡 공유하기</h1>
-    <input type="button" onClick="shareKakaotalk();" value="KAKAO Talk으로 공유하기"/>
-</body>
+
 </html>
