@@ -7,11 +7,49 @@
     function shareKakaotalk() {
         Kakao.init("fb26db4001a90d2b8dac68f3cbc738b4");      // 사용할 앱의 JavaScript 키를 설정
         Kakao.Link.sendDefault({
-            objectType:"feed"
-            ,content : {
-                description: '아메리카노, 빵, 케익
-            }
-        });
+  objectType: 'feed',
+  content: {
+    title: '디저트 사진',
+    description: '아메리카노, 빵, 케익',
+    imageUrl:
+      'http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+    link: {
+      mobileWebUrl: 'https://developers.kakao.com',
+      androidExecParams: 'test',
+    },
+  },
+  social: {
+    likeCount: 10,
+    commentCount: 20,
+    sharedCount: 30,
+  },
+  buttons: [
+    {
+      title: '웹으로 이동',
+      link: {
+        mobileWebUrl: 'https://developers.kakao.com',
+      },
+    },
+    {
+      title: '앱으로 이동',
+      link: {
+        mobileWebUrl: 'https://developers.kakao.com',
+      },
+    },
+  ],
+  success: function(response) {
+    console.log(response);
+  },
+  fail: function(error) {
+    console.log(error);
+  }
+});
+//         Kakao.Link.sendDefault({
+//             objectType:"feed"
+//             ,content : {
+//                 description: '아메리카노, 빵, 케익
+//             }
+//         });
 //         Kakao.Link.createScrapButton({
 // //           container: '#kakao-link-btn',
 //           requestUrl: 'https://despild.github.io/textlink/callback.html'
@@ -44,6 +82,6 @@
 </head>
 <body>
     <h1>카카오톡 공유하기</h1>
-    <input type="button" onClick="shareKakaotalk();" value="빵 KAKAO 로 공유하기"/>
+    <input type="button" onClick="shareKakaotalk();" value="KAKAO톡으로 공유하기"/>
 </body>
 </html>
