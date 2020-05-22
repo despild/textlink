@@ -7,7 +7,10 @@
     function shareKakaotalk() {
         Kakao.init("fb26db4001a90d2b8dac68f3cbc738b4");      // 사용할 앱의 JavaScript 키를 설정
         Kakao.Link.sendDefault({
-            text: "테스트"
+            objectType:"feed"
+            ,content : {
+                text: "테스트"
+            }
         });
 //         Kakao.Link.createScrapButton({
 // //           container: '#kakao-link-btn',
