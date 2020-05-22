@@ -1,52 +1,22 @@
+
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>:: 카카오톡 공유하기 ::</title>
-<script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-<script type="text/javascript">
-    function shareKakaotalk() {
-        Kakao.init("fb26db4001a90d2b8dac68f3cbc738b4");      // 사용할 앱의 JavaScript 키를 설정
-        Kakao.Link.sendScrap({
-          requestUrl: "https://despild.github.io/textlink/callback.html"
-        });
-//         Kakao.Link.sendDefault({
-//             objectType:"feed"
-//             ,content : {
-//                 description: '아메리카노, 빵, 케익
-//             }
-//         });
-//         Kakao.Link.createScrapButton({
-// //           container: '#kakao-link-btn',
-//           requestUrl: 'https://despild.github.io/textlink/callback.html'
-//         });
-//         Kakao.Link.sendScrap({
-//           requestUrl: 'https://despild.github.io/textlink/callback.html'
-//         });
-//         Kakao.Link.sendDefault({
-//               objectType:"feed"
-//             , content : {
-//                   title:"2,000,000원을 받으세요."   // 콘텐츠의 타이틀
-//                 , imageUrl:"http://despild.github.io/dummyPay/paylion.jpg"   // 썸네일 이미지
-//                 , link : {
-//                       mobileWebUrl:"https://despild.github.io/textlink/callback.html"   // 모바일 카카오톡에서 사용하는 웹 링크 URL
-//                     , webUrl:"https://despild.github.io/textlink/callback.html" // PC버전 카카오톡에서 사용하는 웹 링크 URL
-//                 }
-//             }
-//             , buttons : [
-//                 {
-//                       title:"받기"    // 버튼 제목
-//                     , link : {
-//                       mobileWebUrl:"https://despild.github.io/textlink/callback.html"   // 모바일 카카오톡에서 사용하는 웹 링크 URL
-//                     , webUrl:"https://despild.github.io/textlink/callback.html" // PC버전 카카오톡에서 사용하는 웹 링크 URL
-//                 }
-//                 }
-//             ]
-//         });
-    }
+      <head>
+<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script>Kakao.init('fb26db4001a90d2b8dac68f3cbc738b4');</script>
+
+<a id="kakao-link-btn" href="javascript:sendLink()">
+      <img src="http://dn.api1.kage.kakao.co.kr/14/dn/btqa9B90G1b/GESkkYjKCwJdYOkLvIBKZ0/o.jpg" />
+</a>
+
+<script>
+ function sendLink() {
+  Kakao.Link.sendTalkLink({
+    label: '안녕하세요, 꽃다운 ' + '살 개발자입니다.',
+    buttons:[
+    {title:"test"}]
+  });
+}
 </script>
-</head>
-<body>
-    <h1>카카오톡 공유하기</h1>
-    <input type="button" onClick="shareKakaotalk();" value="KALK으로 공유하기"/>
-</body>
+      </head>
+
 </html>
