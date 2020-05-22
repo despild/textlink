@@ -6,26 +6,29 @@
 <script type="text/javascript">
     function shareKakaotalk() {
         Kakao.init("fb26db4001a90d2b8dac68f3cbc738b4");      // 사용할 앱의 JavaScript 키를 설정
-        Kakao.Link.sendDefault({
-              objectType:"feed"
-            , content : {
-                  title:"2,000,000원을 받으세요."   // 콘텐츠의 타이틀
-                , imageUrl:"http://despild.github.io/dummyPay/paylion.jpg"   // 썸네일 이미지
-                , link : {
-                      mobileWebUrl:"https://despild.github.io/textlink/callback.html"   // 모바일 카카오톡에서 사용하는 웹 링크 URL
-                    , webUrl:"https://despild.github.io/textlink/callback.html" // PC버전 카카오톡에서 사용하는 웹 링크 URL
-                }
-            }
-            , buttons : [
-                {
-                      title:"받기"    // 버튼 제목
-                    , link : {
-                      mobileWebUrl:"https://despild.github.io/textlink/callback.html"   // 모바일 카카오톡에서 사용하는 웹 링크 URL
-                    , webUrl:"https://despild.github.io/textlink/callback.html" // PC버전 카카오톡에서 사용하는 웹 링크 URL
-                }
-                }
-            ]
+        Kakao.Link.sendScrap({
+          requestUrl: 'https://despild.github.io/textlink/callback.html'
         });
+//         Kakao.Link.sendDefault({
+//               objectType:"feed"
+//             , content : {
+//                   title:"2,000,000원을 받으세요."   // 콘텐츠의 타이틀
+//                 , imageUrl:"http://despild.github.io/dummyPay/paylion.jpg"   // 썸네일 이미지
+//                 , link : {
+//                       mobileWebUrl:"https://despild.github.io/textlink/callback.html"   // 모바일 카카오톡에서 사용하는 웹 링크 URL
+//                     , webUrl:"https://despild.github.io/textlink/callback.html" // PC버전 카카오톡에서 사용하는 웹 링크 URL
+//                 }
+//             }
+//             , buttons : [
+//                 {
+//                       title:"받기"    // 버튼 제목
+//                     , link : {
+//                       mobileWebUrl:"https://despild.github.io/textlink/callback.html"   // 모바일 카카오톡에서 사용하는 웹 링크 URL
+//                     , webUrl:"https://despild.github.io/textlink/callback.html" // PC버전 카카오톡에서 사용하는 웹 링크 URL
+//                 }
+//                 }
+//             ]
+//         });
     }
 </script>
 </head>
