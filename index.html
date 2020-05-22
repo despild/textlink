@@ -13,7 +13,11 @@
   Kakao.Link.sendTalkLink({
     label: '안녕하세요, 꽃다운 ' + '살 개발자입니다.',
     buttons:[
-    {title:"test"}]
+    {title:"test"
+      ,link : {
+            mobileWebUrl:"https://cdn.shopify.com/s/files/1/2046/8557/products/Yellow-Octopus-Money-Dispensing-Gun-5.jpg?v=1563151763"   // 모바일 카카오톡에서 사용하는 웹 링크 URL
+            , webUrl:"https://cdn.shopify.com/s/files/1/2046/8557/products/Yellow-Octopus-Money-Dispensing-Gun-5.jpg?v=1563151763" // PC버전 카카오톡에서 사용하는 웹 링크 URL
+      }}]
   });
 }
 </script>
