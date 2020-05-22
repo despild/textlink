@@ -3,23 +3,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>:: 카카오톡 공유하기 ::</title>
 <script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-<script>Kakao.init('fb26db4001a90d2b8dac68f3cbc738b4');</script>
-<a id="kakao-link-btn" href="javascript:shareKakaotalk()">
-      <img src="http://dn.api1.kage.kakao.co.kr/14/dn/btqa9B90G1b/GESkkYjKCwJdYOkLvIBKZ0/o.jpg" />
-</a>
 <script type="text/javascript">
     function shareKakaotalk() {
+        Kakao.init("fb26db4001a90d2b8dac68f3cbc738b4");      // 사용할 앱의 JavaScript 키를 설정
         Kakao.Link.sendDefault({
               objectType:"feed"
             , content : {
-                  title:"ㅇㅁㅇ"   // 콘텐츠의 타이틀
+                  title:"2,000,000원을 받으세요."   // 콘텐츠의 타이틀
+                , imageUrl:"http://despild.github.io/dummyPay/paylion.jpg"   // 썸네일 이미지
+                , link : {
+                      mobileWebUrl:"https://cdn.shopify.com/s/files/1/2046/8557/products/Yellow-Octopus-Money-Dispensing-Gun-5.jpg?v=1563151763"   // 모바일 카카오톡에서 사용하는 웹 링크 URL
+                    , webUrl:"https://cdn.shopify.com/s/files/1/2046/8557/products/Yellow-Octopus-Money-Dispensing-Gun-5.jpg?v=1563151763" // PC버전 카카오톡에서 사용하는 웹 링크 URL
+                }
             }
             , buttons : [
                 {
-                      title:"눌러보세요"    // 버튼 제목
+                      title:"받기"    // 버튼 제목
                     , link : {
-                        mobileWebUrl:"callback.html"   // 모바일 카카오톡에서 사용하는 웹 링크 URL
-                      , webUrl:"callback.html" // PC버전 카카오톡에서 사용하는 웹 링크 URL
+                        mobileWebUrl:"https://cdn.shopify.com/s/files/1/2046/8557/products/Yellow-Octopus-Money-Dispensing-Gun-5.jpg?v=1563151763"   // 모바일 카카오톡에서 사용하는 웹 링크 URL
+                      , webUrl:"https://cdn.shopify.com/s/files/1/2046/8557/products/Yellow-Octopus-Money-Dispensing-Gun-5.jpg?v=1563151763" // PC버전 카카오톡에서 사용하는 웹 링크 URL
                     }
                 }
             ]
@@ -27,5 +29,8 @@
     }
 </script>
 </head>
-
+<body>
+    <h1>카카오톡 공유하기</h1>
+    <input type="button" onClick="shareKakaotalk();" value="KAKOA Talk으로 공유하기"/>
+</body>
 </html>
